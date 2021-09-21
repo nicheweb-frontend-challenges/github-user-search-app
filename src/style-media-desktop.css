@@ -1,0 +1,46 @@
+/* ||Desktop */
+@media screen and (min-width: 730px) {
+  body {
+    padding: 144px 0 145px;
+  }
+
+  /* ||desktop-header */
+  body > header {
+    width: 730px;
+  }
+
+  /* ||desktop-nav */
+  nav {
+    margin-top: 35px;
+    margin-bottom: 24px;
+    width: 730px;
+  }
+
+  /* ||desktop-main */
+  main {
+    padding: 48px;
+    width: 730px;
+    display: grid;
+    grid-template-columns: 117px auto;
+    gap: 37px;
+  }
+  main article {
+    margin-top: 0;
+  }
+  main article header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  article header .user-name {
+    order: 1;
+    margin: 0;
+  }
+  article header .join-date {
+    justify-self: end;
+  }
+  article table {
+    margin-bottom: 37px;
+  }
+}

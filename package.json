@@ -1,0 +1,17 @@
+{
+  "name": "github-user-search-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the GitHub user search app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.4.1"
+  }
+}

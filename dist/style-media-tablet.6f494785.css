@@ -1,0 +1,97 @@
+/* ||Tablet */
+@media screen and (min-width: 580px) {
+  body {
+    padding: 140px 0 236px;
+  }
+
+  /* ||tablet-header */
+  body > header {
+    width: 573px;
+  }
+
+  /* ||tablet-nav */
+  nav {
+    margin-bottom: 32px;
+    width: 573px;
+  }
+  nav input {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    height: 69px;
+    padding-left: 80px;
+    padding-right: 103px;
+    background-image: url("/icon-search.259376ce.svg");
+    background-repeat: no-repeat;
+    background-position: left 32px center;
+    background-size: 21.22px auto;
+    text-overflow: ellipsis;
+  }
+  nav button {
+    left: calc(100% - 125px);
+    margin: 9.5px;
+    width: 106px;
+    height: 50px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  /* ||tablet-main */
+  main {
+    padding: 40px;
+    width: 573px;
+  }
+  main article {
+    margin-top: 12px;
+  }
+  main article header {
+    margin-bottom: 24px;
+  }
+  article header h3 {
+    font-size: 2.6rem;
+    line-height: 3.9rem;
+  }
+  article header .user-name {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 2px 0 4px;
+  }
+  article header .join-date {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+  article .bio {
+    font-size: 15px;
+  }
+  main aside {
+    width: 117px;
+    height: 117px;
+    margin-right: 41px;
+  }
+  article table {
+    text-align: left;
+    margin: 32px 0 30px;
+    padding: 15px 32px 17px;
+  }
+  table thead {
+    margin-bottom: 1px;
+  }
+  table thead th {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+  }
+  table td {
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+  }
+
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+  ul li h4 {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+}
+
+
+/*# sourceMappingURL=/style-media-tablet.6f494785.css.map */
