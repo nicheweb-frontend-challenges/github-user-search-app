@@ -118,7 +118,35 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
+// Var initialization
+var darkTheme = document.querySelector(".dark-theme");
+var lightTheme = document.querySelector(".light-theme");
+var searchInput = document.querySelector(".search input");
+var btn = document.querySelector(".search button");
+var profilePicture = document.querySelector(".profile-picture img");
+var userHeading = document.querySelector("article header .heading");
+var userName = document.querySelector("article header .user-name");
+var joinDate = document.querySelector("article header .join-date time");
+var bio = document.querySelector(".bio");
+var repos = document.querySelector("table tbody td:nth-of-type(1)");
+var followers = document.querySelector("table tbody td:nth-of-type(2)");
+var following = document.querySelector("table tbody td:nth-of-type(3)");
+var location = document.querySelector(".location h4");
+var website = document.querySelector(".website h4 a");
+var twitter = document.querySelector(".twitter h4");
+var company = document.querySelector(".company h4");
+var octoUserEndpoint = "https://api.github.com/users/:";
 
+function getUserData(user) {
+  var url = octoUserEndpoint + user;
+  fetch(url).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    return console.log(data);
+  });
+}
+
+getUserData("octocat");
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -147,7 +175,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62557" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51077" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

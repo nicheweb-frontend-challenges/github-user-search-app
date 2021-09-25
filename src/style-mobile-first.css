@@ -18,6 +18,10 @@ button {
   padding: 0;
   border: 0;
 }
+input {
+  -webkit-appearance: none;
+  appearance: none;
+}
 
 /* ||typography */
 html {
