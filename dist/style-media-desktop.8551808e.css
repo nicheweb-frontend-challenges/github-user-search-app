@@ -1,0 +1,2 @@
+@media screen and (min-width:730px){body{padding:144px 0 145px}body>header,nav{width:730px}nav{margin-top:35px;margin-bottom:24px}main{padding:48px;width:730px;display:grid;grid-template-columns:117px auto;gap:37px}main article{margin-top:0}main article header{display:grid;grid-template-columns:1fr 1fr;align-items:center;margin-bottom:20px}article header .user-name{order:1;margin:0}article header .join-date{justify-self:end}article table{margin-bottom:37px}}
+/*# sourceMappingURL=/style-media-desktop.8551808e.css.map */

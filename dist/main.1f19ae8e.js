@@ -145,8 +145,6 @@ function getUserData(user) {
     return console.log(data);
   });
 }
-
-getUserData("octocat");
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -175,7 +173,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51077" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51599" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
