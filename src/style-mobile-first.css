@@ -71,6 +71,16 @@ td {
   line-height: 2.37rem;
   font-weight: 700;
 }
+a:link,
+a:visited,
+a:focus,
+a:active {
+  color: currentColor;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 /* ||sidewide */
 body {
@@ -102,15 +112,8 @@ main table {
 .rounded-in {
   border-radius: 10px;
 }
-.text-link:link,
-.text-link:visited,
-.text-link:focus,
-.text-link:active {
-  color: currentColor;
+.disable-link-hover:hover {
   text-decoration: none;
-}
-.text-link:hover {
-  text-decoration: underline;
 }
 
 /* ||Header */
@@ -177,11 +180,15 @@ nav button:hover {
 
 /* ||Profile picture */
 aside {
-  width: 70px;
-  height: 70px;
   float: left;
   margin-right: 20px;
-  background-color: #ffffff;
+}
+aside .profile-picture-wrapper {
+  width: 70px;
+  height: 70px;
+}
+aside .profile-picture {
+  max-width: 100%;
   border-radius: 50%;
 }
 

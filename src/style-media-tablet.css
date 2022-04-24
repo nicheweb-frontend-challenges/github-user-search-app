@@ -62,7 +62,7 @@
   article .bio {
     font-size: 15px;
   }
-  main aside {
+  aside .profile-picture-wrapper {
     width: 117px;
     height: 117px;
     margin-right: 41px;
