@@ -115,6 +115,9 @@ main table {
 .disable-link-hover:hover {
   text-decoration: none;
 }
+.theme-wrapper:hover {
+  cursor: pointer;
+}
 
 /* ||Header */
 body > header {
@@ -122,7 +125,7 @@ body > header {
   align-items: center;
   justify-content: space-between;
 }
-header .theme-wrapper {
+header .themes {
   display: flex;
   align-items: center;
   justify-content: space-between;

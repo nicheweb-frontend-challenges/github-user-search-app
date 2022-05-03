@@ -119,9 +119,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"main.js":[function(require,module,exports) {
 // DOM initialization
-//funcionalities
+//theme
 var darkTheme = document.querySelector(".dark-theme");
-var lightTheme = document.querySelector(".light-theme");
+var lightTheme = document.querySelector(".light-theme"); // form
+
 var searchForm = document.querySelector(".search");
 var searchInput = document.querySelector(".search input");
 var btn = document.querySelector(".search button"); // profile data
@@ -224,8 +225,6 @@ function publicResult(res) {
     company.removeAttribute("style");
     company.parentElement.parentElement.removeAttribute("style");
   }
-
-  console.log(company);
 }
 
 function getUser(username) {
@@ -241,7 +240,6 @@ function getUser(username) {
 
     return response.json();
   }).then(function (response) {
-    console.log(response);
     publicResult(response);
   }).catch(function (error) {
     console.error("There has been a problem with the fetch operation", error);
@@ -272,7 +270,67 @@ btn.addEventListener("click", function () {
 searchInput.addEventListener("click", function () {
   searchInput.value = "";
   searchInput.removeAttribute("style");
-}); // Missing: Switch between light and dark themes
+}); // Switch between light and dark themes
+// Dark theme
+
+darkTheme.addEventListener("click", function (event) {
+  var theme = event.currentTarget;
+  theme.style.display = "none";
+  lightTheme.style.display = "flex"; // BACKGROUNDS
+  // body and table background
+
+  document.querySelectorAll("body, table").forEach(function (item) {
+    return item.style.backgroundColor = "#141d2f";
+  }); // nav, input and main background
+
+  document.querySelectorAll("nav input, main").forEach(function (item) {
+    item.style.backgroundColor = "#1e2a47";
+    item.style.boxShadow = "none";
+  }); // Text color
+  // tbod
+
+  document.querySelector("body").style.color = "#ffffff";
+  document.querySelectorAll("h1, article header h3, table tbody td").forEach(function (item) {
+    item.style.color = document.querySelector("body").style.color;
+  });
+  console.log(document.querySelectorAll("h1, article header h3, table tbody td"));
+}); // Dark theme :hover
+
+darkTheme.addEventListener("mouseover", function (event) {
+  event.currentTarget.style.color = "#222731";
+});
+darkTheme.addEventListener("mouseleave", function (event) {
+  event.currentTarget.style.color = document.querySelector("body").style.color;
+}); // light Theme
+
+lightTheme.addEventListener("click", function (event) {
+  var theme = event.currentTarget;
+  theme.style.display = "none";
+  darkTheme.style.display = "flex"; // BACKGROUNDS
+  // body and table background
+
+  document.querySelectorAll("body, table").forEach(function (item) {
+    item.style.backgroundColor = "#f6f8ff";
+  }); // nav, input and main background
+
+  document.querySelectorAll("nav input, main").forEach(function (item) {
+    item.style.backgroundColor = "#fefefe";
+    item.style.boxShadow = "0px 16px 30px rgba(70, 96, 187, 0.1986";
+  }); // Text color
+  // tbod
+
+  document.querySelector("body").style.color = "#4b6a9b";
+  document.querySelectorAll("h1, article header h3, table tbody td").forEach(function (item) {
+    item.style.color = "#222731";
+  });
+}); // Light theme :hover
+
+lightTheme.addEventListener("mouseover", function (event) {
+  event.currentTarget.style.color = "#90a4d4";
+});
+lightTheme.addEventListener("mouseleave", function (event) {
+  event.currentTarget.style.color = document.querySelector("body").style.color;
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -301,7 +359,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53755" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59815" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

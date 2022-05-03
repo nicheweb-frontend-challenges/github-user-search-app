@@ -12,12 +12,8 @@
   body {
     color: #ffffff;
   }
-  .dark-theme.theme-wrapper {
+  .dark-theme.themes {
     display: none;
-  }
-  header .theme-wrapper:hover {
-    color: #90a4d4;
-    cursor: pointer;
   }
 }
 @media (prefers-color-scheme: light) {
@@ -40,11 +36,7 @@
   table tbody td {
     color: #222731;
   }
-  .light-theme.theme-wrapper {
+  .light-theme.themes {
     display: none;
-  }
-  header .theme-wrapper:hover {
-    color: initial;
-    cursor: pointer;
   }
 }

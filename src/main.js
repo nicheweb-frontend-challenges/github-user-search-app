@@ -1,7 +1,8 @@
 // DOM initialization
-//funcionalities
+//theme
 const darkTheme = document.querySelector(".dark-theme");
 const lightTheme = document.querySelector(".light-theme");
+// form
 const searchForm = document.querySelector(".search");
 const searchInput = document.querySelector(".search input");
 const btn = document.querySelector(".search button");
@@ -111,7 +112,6 @@ function publicResult(res) {
     company.removeAttribute("style");
     company.parentElement.parentElement.removeAttribute("style");
   }
-  console.log(company);
 }
 
 function getUser(username) {
@@ -128,7 +128,6 @@ function getUser(username) {
       return response.json();
     })
     .then((response) => {
-      console.log(response);
       publicResult(response);
     })
     .catch((error) => {
@@ -160,4 +159,69 @@ searchInput.addEventListener("click", function () {
   searchInput.value = "";
   searchInput.removeAttribute("style");
 });
-// Missing: Switch between light and dark themes
+// Switch between light and dark themes
+// Dark theme
+darkTheme.addEventListener("click", function (event) {
+  const theme = event.currentTarget;
+  theme.style.display = "none";
+  lightTheme.style.display = "flex";
+  // BACKGROUNDS
+  // body and table background
+  document
+    .querySelectorAll("body, table")
+    .forEach((item) => (item.style.backgroundColor = "#141d2f"));
+  // nav, input and main background
+  document.querySelectorAll("nav input, main").forEach((item) => {
+    item.style.backgroundColor = "#1e2a47";
+    item.style.boxShadow = "none";
+  });
+  // Text color
+  // tbod
+  document.querySelector("body").style.color = "#ffffff";
+  document
+    .querySelectorAll("h1, article header h3, table tbody td")
+    .forEach((item) => {
+      item.style.color = document.querySelector("body").style.color;
+    });
+  console.log(
+    document.querySelectorAll("h1, article header h3, table tbody td")
+  );
+});
+// Dark theme :hover
+darkTheme.addEventListener("mouseover", (event) => {
+  event.currentTarget.style.color = "#222731";
+});
+darkTheme.addEventListener("mouseleave", (event) => {
+  event.currentTarget.style.color = document.querySelector("body").style.color;
+});
+// light Theme
+lightTheme.addEventListener("click", function (event) {
+  const theme = event.currentTarget;
+  theme.style.display = "none";
+  darkTheme.style.display = "flex";
+  // BACKGROUNDS
+  // body and table background
+  document.querySelectorAll("body, table").forEach((item) => {
+    item.style.backgroundColor = "#f6f8ff";
+  });
+  // nav, input and main background
+  document.querySelectorAll("nav input, main").forEach((item) => {
+    item.style.backgroundColor = "#fefefe";
+    item.style.boxShadow = "0px 16px 30px rgba(70, 96, 187, 0.1986";
+  });
+  // Text color
+  // tbod
+  document.querySelector("body").style.color = "#4b6a9b";
+  document
+    .querySelectorAll("h1, article header h3, table tbody td")
+    .forEach((item) => {
+      item.style.color = "#222731";
+    });
+});
+// Light theme :hover
+lightTheme.addEventListener("mouseover", (event) => {
+  event.currentTarget.style.color = "#90a4d4";
+});
+lightTheme.addEventListener("mouseleave", (event) => {
+  event.currentTarget.style.color = document.querySelector("body").style.color;
+});
