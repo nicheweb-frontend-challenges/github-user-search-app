@@ -157,7 +157,9 @@ btn.addEventListener("click", function () {
 // Clicking the input box
 searchInput.addEventListener("click", function () {
   searchInput.value = "";
-  searchInput.removeAttribute("style");
+  searchInput.style.color = null;
+  searchInput.style.textAlign = null;
+  // searchInput.removeAttribute("style");
 });
 // Switch between light and dark themes
 // Dark theme
