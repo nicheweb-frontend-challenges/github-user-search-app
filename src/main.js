@@ -189,13 +189,7 @@ darkTheme.addEventListener("click", function (event) {
     document.querySelectorAll("h1, article header h3, table tbody td")
   );
 });
-// Dark theme :hover
-darkTheme.addEventListener("mouseover", (event) => {
-  event.currentTarget.style.color = "#222731";
-});
-darkTheme.addEventListener("mouseleave", (event) => {
-  event.currentTarget.style.color = document.querySelector("body").style.color;
-});
+
 // light Theme
 lightTheme.addEventListener("click", function (event) {
   const theme = event.currentTarget;
@@ -220,10 +214,23 @@ lightTheme.addEventListener("click", function (event) {
       item.style.color = "#222731";
     });
 });
-// Light theme :hover
-lightTheme.addEventListener("mouseover", (event) => {
-  event.currentTarget.style.color = "#90a4d4";
-});
-lightTheme.addEventListener("mouseleave", (event) => {
-  event.currentTarget.style.color = document.querySelector("body").style.color;
-});
+
+// Hover
+if (matchMedia("(pointer:fine)").matches) {
+  // Dark theme :hover
+  darkTheme.addEventListener("mouseover", (event) => {
+    event.currentTarget.style.color = "#222731";
+  });
+  darkTheme.addEventListener("mouseleave", (event) => {
+    event.currentTarget.style.color =
+      document.querySelector("body").style.color;
+  });
+  // Light theme :hover
+  lightTheme.addEventListener("mouseover", (event) => {
+    event.currentTarget.style.color = "#90a4d4";
+  });
+  lightTheme.addEventListener("mouseleave", (event) => {
+    event.currentTarget.style.color =
+      document.querySelector("body").style.color;
+  });
+}

@@ -295,13 +295,6 @@ darkTheme.addEventListener("click", function (event) {
     item.style.color = document.querySelector("body").style.color;
   });
   console.log(document.querySelectorAll("h1, article header h3, table tbody td"));
-}); // Dark theme :hover
-
-darkTheme.addEventListener("mouseover", function (event) {
-  event.currentTarget.style.color = "#222731";
-});
-darkTheme.addEventListener("mouseleave", function (event) {
-  event.currentTarget.style.color = document.querySelector("body").style.color;
 }); // light Theme
 
 lightTheme.addEventListener("click", function (event) {
@@ -324,14 +317,24 @@ lightTheme.addEventListener("click", function (event) {
   document.querySelectorAll("h1, article header h3, table tbody td").forEach(function (item) {
     item.style.color = "#222731";
   });
-}); // Light theme :hover
+}); // Hover
 
-lightTheme.addEventListener("mouseover", function (event) {
-  event.currentTarget.style.color = "#90a4d4";
-});
-lightTheme.addEventListener("mouseleave", function (event) {
-  event.currentTarget.style.color = document.querySelector("body").style.color;
-});
+if (matchMedia("(pointer:fine)").matches) {
+  // Dark theme :hover
+  darkTheme.addEventListener("mouseover", function (event) {
+    event.currentTarget.style.color = "#222731";
+  });
+  darkTheme.addEventListener("mouseleave", function (event) {
+    event.currentTarget.style.color = document.querySelector("body").style.color;
+  }); // Light theme :hover
+
+  lightTheme.addEventListener("mouseover", function (event) {
+    event.currentTarget.style.color = "#90a4d4";
+  });
+  lightTheme.addEventListener("mouseleave", function (event) {
+    event.currentTarget.style.color = document.querySelector("body").style.color;
+  });
+}
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -360,7 +363,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62171" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64010" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
